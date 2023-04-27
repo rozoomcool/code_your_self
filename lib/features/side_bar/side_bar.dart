@@ -9,7 +9,7 @@ class SideBar extends StatelessWidget {
       margin: const EdgeInsets.only(left: 8.0),
       padding: const EdgeInsets.all(4.0),
       decoration: BoxDecoration(
-          color: Colors.black54,
+          color: Colors.black87,
           borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisSize: MainAxisSize.min,

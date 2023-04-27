@@ -1,4 +1,5 @@
 import 'package:code_you/features/desktop/desktop.dart';
+import 'package:code_you/widget/mac_window.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -17,44 +18,69 @@ class HomePage extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Opacity(
-                    opacity: 0.5,
-                    child: ImageFiltered(
-                        imageFilter:
-                            ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                        child: Image.asset('imgpreview.jpg')),
-                  ),
+                  ImageFiltered(
+                      imageFilter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                          child: Image.asset('prog.gif',
+                              fit: BoxFit.cover, width: double.infinity))),
                   Container(
                     margin: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height / 2 - 100,
                         left: (MediaQuery.of(context).size.width / 9)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Межгалактическая\nфедерация\nкодинга',
-                            textAlign: TextAlign.left,
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineLarge
-                                ?.copyWith(
-                                    fontSize: 70,
-                                    fontFamily:
-                                        GoogleFonts.pressStart2p().fontFamily)),
-                        Text(
-                            '1000001110001111010001101001110010111101101100101100000111100111011111110101111001010000011001111101111110000111011001110011',
-                            textAlign: TextAlign.left,
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineLarge
-                                ?.copyWith(
-                                    fontSize: 18,
-                                    fontFamily:
-                                        GoogleFonts.pressStart2p().fontFamily))
-                      ],
+                    child: MacWindow(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text('Межгалактическая федерация кодинга',
+                              textAlign: TextAlign.left,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineLarge
+                                  ?.copyWith(
+                                      fontSize: 70,
+                                      fontFamily: GoogleFonts.pressStart2p()
+                                          .fontFamily)),
+                          const SizedBox(height: 50),
+                          Text(
+                              '1000001110001111010001101001110010111101101100101 1111001110111111101011110010 11001111101111110000111011001110011',
+                              textAlign: TextAlign.left,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineLarge
+                                  ?.copyWith(
+                                      fontSize: 18,
+                                      height: 2,
+                                      fontFamily: GoogleFonts.pressStart2p()
+                                          .fontFamily))
+                        ],
+                      ),
                     ),
                   )
                 ],
-              )
+              ),
+              // SizedBox(
+              //   height: 300,
+              //   child: SingleChildScrollView(
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //       children: const [
+              //         MacWindow(
+              //           child: Text('Общайся'),
+              //         ),
+              //         MacWindow(
+              //           child: Text('Соревнуйся'),
+              //         ),
+              //         MacWindow(
+              //           child: Text('Обучайся'),
+              //         ),
+              //         MacWindow(
+              //           child: Text('Будь на чиле'),
+              //         )
+              //       ],
+              //     ),
+              //   ),
+              // )
             ],
           ),
         )),
