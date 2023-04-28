@@ -1,3 +1,4 @@
+import 'package:code_you/features/authorization/user__auth_form.dart';
 import 'package:code_you/presentation/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -12,12 +13,12 @@ class MainApp extends StatelessWidget {
         path: '/',
         builder: (BuildContext context, GoRouterState state) => HomePage(),
         routes: <RouteBase>[
-          // GoRoute(
-          //   path: 'details',
-          //   builder: (BuildContext context, GoRouterState state) {
-          //     return const DetailsScreen();
-          //   },
-          // ),
+          GoRoute(
+            path: 'auth',
+            builder: (BuildContext context, GoRouterState state) {
+              return UserAuthForm();
+            },
+          ),
         ],
       ),
     ],

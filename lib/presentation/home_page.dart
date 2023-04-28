@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                               fit: BoxFit.cover, width: double.infinity))),
                   Container(
                     margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height / 2 - 100,
+                        top: MediaQuery.of(context).size.height / 2 - 200,
                         left: (MediaQuery.of(context).size.width / 9)),
                     child: MacWindow(
                       child: Column(
@@ -59,26 +59,24 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              // SizedBox(
-              //   height: 300,
-              //   child: SingleChildScrollView(
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //       children: const [
-              //         MacWindow(
-              //           child: Text('Общайся'),
-              //         ),
-              //         MacWindow(
-              //           child: Text('Соревнуйся'),
-              //         ),
-              //         MacWindow(
-              //           child: Text('Обучайся'),
-              //         ),
-              //         MacWindow(
-              //           child: Text('Будь на чиле'),
-              //         )
-              //       ],
-              //     ),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: const [
+              //       MacWindow(
+              //         child: Text('Общайся'),
+              //       ),
+              //       MacWindow(
+              //         child: Text('Соревнуйся'),
+              //       ),
+              //       MacWindow(
+              //         child: Text('Обучайся'),
+              //       ),
+              //       MacWindow(
+              //         child: Text('Будь на чиле'),
+              //       )
+              //     ],
               //   ),
               // )
             ],
