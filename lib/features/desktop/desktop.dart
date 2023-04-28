@@ -29,7 +29,7 @@ class Desktop extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => context.go('/'), child: const Icon(Icons.house)),
+      floatingActionButton: FloatingActionButton(onPressed: () => context.go('/'), backgroundColor: Colors.black87, foregroundColor: Colors.amber, child: const Icon(Icons.house)),
     );
   }
 }

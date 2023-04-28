@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../application/domain/consts.dart';
 
@@ -27,6 +28,7 @@ class _StormCardV1State extends State<StormCardV1> {
           setState(() {
             _scale = 1;
           });
+          context.go('/auth');
         },
         scale: _scale,
         duration: const Duration(milliseconds: 125),

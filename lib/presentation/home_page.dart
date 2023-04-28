@@ -148,13 +148,12 @@ class HomePage extends StatelessWidget {
                   flex: 4,
                   child: MacWindow(
                     child: Column(children: [
-                      Text('Соревнуйся',
-                          style: textStyle.copyWith(fontSize: 20)),
+                      Text('ОБучалка', style: textStyle.copyWith(fontSize: 20)),
                       const SizedBox(height: 5),
                       const Divider(color: Colors.black87),
                       const SizedBox(height: 5),
                       Text(
-                          'Общайся с интересными персонажами из нашего сообщества. Делись с ними опытом и находи друзей.',
+                          'Если у вас есть предложения о добавлении новых функций или вы хотите получить помощь экспертов, наши специалисты всегда рады оказать вам помощь. На нашем сайте знания – это мощная сила, которой вы можете воспользоваться, чтобы достичь больших успехов в вашей карьере в IT-сфере. Присоединяйтесь к нашей дружной команде уже сегодня!',
                           style: textStyle)
                     ]),
                   ),
@@ -162,12 +161,13 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   flex: 4,
                   child: Column(children: [
-                    Text('Общайся', style: textStyle.copyWith(fontSize: 20)),
+                    Text('Название не придумал',
+                        style: textStyle.copyWith(fontSize: 20)),
                     const SizedBox(height: 5),
                     const Divider(color: Colors.black87),
                     const SizedBox(height: 5),
                     Text(
-                        'Общайся с интересными персонажами из нашего сообщества. Делись с ними опытом и находи друзей.',
+                        'Наши видео уроки по языкам программирования, обучат вас принципам программирования, операторам, циклам и функциям, и помогут решить любые трудности на вашем пути к экспертности. У нас также есть инструменты, которые помогут вам связаться с другими пользователями, задавать вопросы и обсуждать детали в рамках проектов.',
                         style: textStyle)
                   ]),
                 ),

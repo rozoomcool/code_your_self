@@ -1,6 +1,7 @@
 import 'package:code_you/application/domain/user_state.dart';
 import 'package:code_you/features/authorization/user__auth_form.dart';
 import 'package:code_you/presentation/home_page.dart';
+import 'package:code_you/presentation/ide_page.dart';
 import 'package:code_you/presentation/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
     routes: <RouteBase>[
       GoRoute(
         path: '/',
-        builder: (BuildContext context, GoRouterState state) => HomePage(),
+        builder: (BuildContext context, GoRouterState state) => const HomePage(),
         routes: <RouteBase>[
           GoRoute(
             path: 'auth',
@@ -28,6 +29,12 @@ class MainApp extends StatelessWidget {
               return const SearchPage();
             },
           ),
+          GoRoute(
+            path: 'ide',
+            builder: (BuildContext context, GoRouterState state) {
+              return const IdePage();
+            },
+          )
         ],
       ),
     ],
