@@ -6,7 +6,7 @@ class UserModel {
   String password;
   DateTime date;
   String fullAddress;
-  String? job;
+  List<String>? job;
   String? specialization;
   String serialNumber;
 

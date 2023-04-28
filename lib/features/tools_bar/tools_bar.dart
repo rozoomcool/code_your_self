@@ -10,8 +10,8 @@ class ToolsBar extends StatelessWidget {
 
     final textStyle = TextStyle(fontFamily: GoogleFonts.pressStart2p().fontFamily);
 
-    return SizedBox(
-      // decoration: BoxDecoration(color: Theme.of(context).cardColor),
+    return Container(
+      decoration: const BoxDecoration(color: Colors.black87),
       width: MediaQuery.of(context).size.width,
       height: 25,
       child: Row(
